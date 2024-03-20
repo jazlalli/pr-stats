@@ -1,0 +1,21 @@
+{
+    "name": "github-gql-client",
+    "version": "1.0.0",
+    "description": "General purpose GitHub GraphQL API client",
+    "main": "main.js",
+    "type": "module",
+    "scripts": {
+        "start": "http-server",
+        "fetch-mine": "node ./scripts/myPulls.js --refresh",
+        "fetch-latest": "node ./scripts/latestPulls.js --refresh",
+        "fetch": "npm run fetch-mine && npm run fetch-latest"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "echarts": "^5.4.1",
+        "http-server": "^14.1.1",
+        "octokit": "^2.0.14"
+    }
+}

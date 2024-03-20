@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <style>
+            html,
+            body {
+                box-sizing: border-box;
+                font-size: 16px;
+                font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+                    sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+                    "Segoe UI Symbol";
+            }
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                padding: 8px;
+            }
+            header {
+                display: flex;
+                justify-content: space-between;
+            }
+            header iframe {
+                position: fixed;
+                right: 0;
+                z-index: 99;
+            }
+            h1 {
+                margin: 8px 0 16px 0;
+            }
+            h1 .tiny {
+                font-size: 10px;
+            }
+            fieldset {
+                padding: 16px;
+            }
+            fieldset legend {
+                padding: 0 4px;
+            }
+            input[type="text"],
+            button {
+                padding: 4px;
+            }
+            input:hover,
+            label:hover {
+                cursor: pointer;
+            }
+            .controls {
+                display: flex;
+                padding: 0 4px;
+            }
+            .control + .control {
+                margin-left: 16px;
+            }
+            #chart {
+                position: absolute;
+                left: -16px;
+                right: 0;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>pr<span class="tiny">st</span>ats</h1>
+            <iframe
+                src="https://giphy.com/embed/jD1Srisa2eYDK"
+                width="120"
+                height="60"
+                frameborder="0"
+            ></iframe>
+        </header>
+        <fieldset>
+            <legend>Chart controls</legend>
+            <div class="controls">
+                <div class="control">
+                    <label for="mine">
+                        <input type="radio" id="mine" name="prs" checked />
+                        My PR Timeline
+                    </label>
+                </div>
+                <div class="control">
+                    <label for="duration">
+                        <input type="radio" id="duration" name="prs" />
+                        Open duration 𝑋 reviewer count (All PRs)
+                    </label>
+                </div>
+                <div class="control">
+                    <label for="labels">
+                        <input type="radio" id="labels" name="prs" />
+                        Merged 𝑋 label (All PRs)
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+        <div id="chart"></div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="main.js" type="module"></script>
+</html>
