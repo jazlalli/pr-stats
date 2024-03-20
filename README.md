@@ -22,7 +22,10 @@ repo
 user
 ```
 
-Copy the generated token into a `.env` file at the root of this repo
+Copy the generated token into a `.env` file at the root of this repo, so that
+the file contents is
+
+`PERSONAL_ACCESS_TOKEN=ghp_[code]`
 
 ## Run
 
